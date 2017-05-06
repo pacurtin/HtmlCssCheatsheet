@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>HTML Cheat Sheet</title>
+	<!-- This is a comment. -->
+	<meta name="description" content="Examples of the most commonly used HTML and CSS">
+	<link href="css/example.css" type="text/css" rel="stylesheet"/>
+  </head>
+  <body>
+	<header>
+		<h1>HTML Cheat Sheet </h1>
+			<nav>
+				<a href="#intro">Introduction</a>
+				<a href="#text">Text</a>
+				<a href="#lists">Lists</a>
+				<a href="#links">Links</a>
+				<a href="#images">Images</a>
+				<a href="#tables">Tables</a>
+				<a href="#forms">Forms</a>
+				<a href="#iframes">Iframes</a>
+				<a class="coming-soon" href="#something">JustAnExample</a>
+			</nav>	
+	</header>
+	<div class = "restOfScreen">
+		<div class="floating-side-by-side-divs align-center">
+			<div class="introduction-div">
+				<h2 id="intro">Introduction</h2>
+				<p id="idSelectorExample" class="movedRelativly">	
+					This is a set of all the different HTML examples in HTML and CSS - Design and Build Websites.
+					I'm typing them out to help memorise them and also to practice touch typing.
+					I'm flying from London to Singapore so I'm doing this to kill time!
+				</p>
+				<br />
+				<p class = "p2 movedAbsolutely">	
+					This is a set of all the different HTML examples in HTML and CSS - Design and Build Websites.
+					I'm typing them out to help memorise them and also to practice touch typing.
+					I'm flying from London to Singapore so I'm doing this to kill time!
+				</p>
+			</div>
+			<div id="text-div">
+				<h2 id="text">Text</h2>
+				<p class="custom-class-2">	
+					<strong>This <em>is</em> a paragraph.</strong> 
+					<del>aslkdfjsskljfsl;s;fjs <sub>lsfjljs</sub> kalshdhf 
+					lksdfhjkshlf</del> <ins>end of giberish.</ins> 
+				</p>
+				<br />
+				<br />
+				<br />
+				<blockquote>This is a quote. It's not very long.</blockquote>
+				<p class="custom-class">	
+					This is a second paragraph.<sup>I think<sup>cool...<sup>LOL</sup></sup></sup> 
+					aslkdfjsskljfsl;s;fjs ;lsfjljs kalshdhf 
+					lksdfhjkshlf <b>end</b> of <i>giberish</i>. I needed to make this paragraph a bit longer to se how the float Css feature looks. I've made the quote to the right float. I'm a bit dissapointed how it turns out as Ithought it would be more like the wrap around feature in Microsoft word. Oh well.
+					Actually it is. Never mind.<abbr title="Mother of all bombs">MOAB</abbr> 
+				</p>
+				<div id="div1">This is div1.</div>
+				<div id="div2">This is div2.</div>
+			</div>
+		</div>	
+		<div class="floating-side-by-side-divs">
+			<div id="lists-div">
+				<h2 id="lists">Lists</h2>
+				<ol>
+					<li>List item 1</li>
+					<li>List item 2</li>
+				</ol>
+				<ul>
+					<li>List item 1</li>
+					<li>List item 2</li>
+				</ul>
+				<h3>Escape Characters</h3>
+				<ul>
+					<li>&lt;</li>
+					<li>&amp;</li>
+					<li>&copy;</li>
+				</ul>
+				<dl>
+					<dt>Definition list item 1</dt>
+					<dd>Good description.</dd>
+					<dt>Definition list item 2</dt>
+					<dd>Bad description.</dd>
+				</dl>
+			</div>
+			<div id="links-div">
+				<h2 id="links">Links</h2>
+				<a href="http://www.imdb.com" target="_blank">IMDB</a>
+				<p><b>Opens in new window.</b></p>
+				<br />
+				<a href="ChildDirectory/OtherPageExample.html">Other Page Example</a>
+			</div>
+			<div id="images-div">
+				<h2 id="images">Images</h2>
+				<figure>
+					<img src="images/image.jpg" alt="My example image." title="My example image."/>
+					<figcaption>American Psycho by Monanu</figcaption>
+				<figure/>
+		</div>
+		</div>
+
+		<div class="floating-side-by-side-divs">
+			<div id="tables-div">
+				<h2 id="tables">Tables</h2>
+				<table>
+					<thead>
+						<tr>
+							<th></th>
+							<th>Col1</th>
+							<th>Col2</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>Row1</th>
+							<td colspan="2">1</td>
+						</tr>
+						<tr>
+							<th>Row2</th>
+							<td>1000</td>
+							<td>6</td>
+						</tr>
+						<tr>
+							<th>Row3</th>
+							<td colspan="2">123</td>
+						</tr>
+						<tr>
+							<th>Row4</th>
+							<td>635</td>
+							<td>6</td>
+						</tr>
+						<tr>
+							<th>Row5</th>
+							<td>hello</td>
+							<td>6</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>	
+			<div id="forms-div">
+				<h2 id="forms">Forms</h2>
+				<form action="http://example.php" method="GET">
+					<fieldset>
+						<legend>My GET form fieldset example</legend>
+						<div><label>Username:</label><input type="text" name="username" maxLenght="30" required="required" /></div>
+						<div><label>Password:</label><input type="password" name="password" maxLenght="30" required="required" /></div>
+						<div><label>Date:</label><input type="date" name="dob" /></div>
+						<div><label>Email:</label><input type="email" name="email" /></div>
+						<div><label>Website:</label><input type="url" name="dob" /></div>
+						<div><label>Comment:</label><input type="textarea" name="comment" /></div>
+						<div><label>Favorite Music:
+							<input type="radio" name="radio" value="Rock" /> Rock
+							<input type="radio" name="radio" value="Classical" /> Classical
+							<input type="radio" name="radio" value="Hip Hop" /> Hip Hop
+						</label></div>
+						<div><label>Favorite Bike:
+							<input type="checkbox" name="checkbox" value="125cc" /> 125cc
+							<input type="checkbox" name="checkbox" value="250cc" /> 250cc
+							<input type="checkbox" name="checkbox" value="500cc" /> 500cc
+						</label></div>
+						<div><label>Favorite Pet:</label>
+							<select>
+								<option value="Cat">Cat</option>
+								<option value="Dog">Dog</option>
+								<option value="Bird">Bird</option>
+							</select>
+						</div>
+						<div><input type="submit" value="Submit" /></div>
+
+					</fieldset>
+				</form>
+				<br />
+				<form action="http://example.php" method="POST">
+					<label>Upload song:<input type="file" name="user-song" /></label>
+					<input type="submit" value="Submit" />
+				</form>
+				<br />
+				<form action="http://example.php" method="GET">
+					<p>This is a button:</p>
+					<button>Hello</button>
+				</form>
+				<form action="http://example.php" method="GET">
+					<p>Search:</p>
+					<input type="search" name="search" />
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+
+			<div id="iframes-div">
+				<h2 id="iframes">Iframes</h2>
+				<iframe width="90%" height="500" src="ChildDirectory/OtherPageExample.html"></iframe>
+			</div>	
+		</div>
+
+		<footer>
+			<address>
+				<p>Author, 10 Fake street, Dublin</p>
+			</address>
+		</footer>
+	</div>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+/*universal selector*/
+*{
+	/*leading?*/
+	margin-top:0;
+	line-height:1.4em;
+	/*kerning?*/
+	letter-spacing:0.1em;
+	text-align:justify;
+	border-width:1px;
+}
+
+body{
+	font-family: Arial, Verdana, sans-serif;
+	background-color: lightgrey;
+}
+
+body * {
+	border-width:1px;
+	border-style:solid;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 5px;
+}
+
+/*type selector*/
+h1,h2,h3{
+	color:red;
+	background-color: darkred;
+}
+
+h2{
+	font-size:150%;
+	text-transform:uppercase;
+}
+
+p{
+	background-color:white;
+}
+
+/*css psuedo element*/
+p:first-letter{
+	font-size:150%;
+}
+
+/*class selector*/
+.custom-class{
+	color:green;
+	text-decoration: underline;
+}
+
+/*Not working?*/
+.align-center{
+	text-align: center;
+}
+
+/*attribute selector*/
+p[class="custom-class-2"]{
+	color:pink;
+	text-decoration: underline;
+}
+
+/*id selector*/
+#idSelectorExample{
+	color:purple;
+}
+
+/*direct child selector*/
+div > a {
+	color:white;
+}
+
+/*desendant selector*/
+body li {
+	color:orange;
+}
+
+/* Box dimensions */
+div.introduction-div {
+	float:left;
+	height: 400px;
+	width: 600px;
+	background-color": #bbbbaa;
+	margin: 0 auto;
+}
+
+.introduction-div  > p {
+	/*height: 75%;
+	width: 75%;*/
+	min-width: 400px;
+	max-width: 500px;
+	margin: 10px auto 10px auto;
+}
+
+#text-div{
+	float:left;
+	width: 600px;
+}
+
+#lists-div{
+	float:left;
+	width: 400px;
+}
+
+#links-div{
+	float:left;
+	width: 400px;
+}
+
+#images-div{
+	float:left;
+	width: 600px;
+}
+
+#tables-div{
+	float:left;
+	width: 30%;
+}
+
+#tables-div *{
+	width: 90%;
+}
+
+#forms-div{
+	float:left;
+	width: 30%;
+}
+
+#forms-div *{
+	width: 90%;
+}
+
+#iframes-div{
+	float:left;
+	width: 30%;
+}
+
+/*SUPER AWESOME TRICK FOR FLOATING STUFF CORRECTLY*/
+.floating-side-by-side-divs{
+	overflow:auto;
+	width:100%;
+}
+
+blockquote{
+	float:right;
+	width: 150px;
+	margin: 10px 10px 10px 10px;
+	font-style: italic;
+}
+
+header{
+	position: fixed;
+	width:100%;
+	border-radius: 0px;
+	background-color: darkred;
+	z-index:10;
+	padding: 2px;
+	margin: 0px;
+	display:inline-block;
+}
+
+.topOfScreen h1{
+	margin: 10px;
+}
+
+div.restOfScreen{
+	position:relative;
+	top:130px;
+}
+
+p.p2{
+	overflow:scroll;
+}
+
+p.movedRelativly{
+	position: relative;
+	top:30px;
+	left:30px;
+}
+
+p.movedAbsolutely{
+	position: absolute;
+	top:250px;
+	left:30px;
+}
+
+.coming-soon{
+	display:none;
+}
+
+ul{
+	/*list-style-image: url("../images/image.jpg");*/
+	list-style-position:inside;
+}
+
+ol{
+	list-style-position:inside;
+	list-style-type: upper-roman;
+}
+
+li{
+	margin: 10px 0px 10px 0px;
+}
+
+table{
+	margin: 10px auto 10px auto;
+	width:75%;
+}
+
+th{
+	border-bottom: 2px solid black;
+	border-top: 0px solid black;
+	border-left: 0px solid black;
+	border-right: 0px solid black;
+	border-radius: 0px;
+	text-transform: uppercase;
+}
+
+tr.even{
+	background-color: #eeeeee;
+}
+
+label{
+	border: none;
+}
+
+input:hover{
+	background-color: #444444;
+}
+
+input:focus{
+	background-color: #efefef;
+}
+
+input#submit{
+	background-color: #444444;
+}
