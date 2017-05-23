@@ -140,6 +140,14 @@ div.introduction-div {
 	width:100%;
 }
 
+.blue-background{
+	background-color: blue;
+}
+
+.red-background{
+	background-color: darkred;
+}
+
 blockquote{
 	float:right;
 	width: 150px;
