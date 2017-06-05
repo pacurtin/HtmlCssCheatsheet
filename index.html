@@ -9,6 +9,7 @@
   <body>
 	<header>
 		<h1>HTML Cheat Sheet </h1>
+			<button id="share">Modal</button>
 			<nav>
 				<a href="#intro">Introduction</a>
 				<a href="#text">Text</a>
@@ -19,6 +20,9 @@
 				<a href="#forms">Forms</a>
 				<a href="#iframes">Iframes</a>
 				<a href="#javascripts">Javascripts</a>
+				<a href="#accordion">Accordion</a>
+				<a href="#tablist">Tab List</a>
+				<a href="#pv">Photo Viewer</a>>
 				<a class="coming-soon" href="#something">JustAnExample</a>
 			</nav>	
 			<div id = "mouse-coords">
@@ -149,8 +153,10 @@
 				<form action="http://example.php" method="GET">
 					<fieldset>
 						<legend>My GET form fieldset example</legend>
-						<div><label>Username:</label><input type="text" name="username" maxLenght="30" required="required" /></div>
-						<div><label>Password:</label><input type="password" name="password" maxLenght="30" required="required" /></div>
+						<div><label>Username:</label><input id="formUserName" type="text" name="username" maxLenght="30" required="required" /></div>
+						<div id="formUserNameWarning"></div>
+						<div><label>Password:</label><input id="formPassword" type="password" name="password" maxLenght="30" required="required" /></div>
+						<div id="formPasswordWarning"></div>
 						<div><label>Date:</label><input type="date" name="dob" /></div>
 						<div><label>Email:</label><input type="email" name="email" /></div>
 						<div><label>Website:</label><input type="url" name="dob" /></div>
@@ -166,14 +172,14 @@
 							<input type="checkbox" name="checkbox" value="500cc" /> 500cc
 						</label></div>
 						<div><label>Favorite Pet:</label>
-							<select>
+							<select id="petChoice">
 								<option value="Cat">Cat</option>
 								<option value="Dog">Dog</option>
 								<option value="Bird">Bird</option>
 							</select>
 						</div>
+						<div id="petChoiceWarning"></div>
 						<div><input type="submit" value="Submit" /></div>
-
 					</fieldset>
 				</form>
 				<br />
@@ -198,6 +204,7 @@
 				<iframe width="90%" height="500" src="ChildDirectory/OtherPageExample.html"></iframe>
 			</div>		
 		</div>
+
 		<div id="javascripts-div">
 				<h2 id="javascripts">Javascripts</h2>
 				<script src="js/add-content.js"></script>
@@ -222,11 +229,69 @@
 				<script src="js/math-example.js"></script>
 				<script src="js/date-example.js"></script>
 				<script src="js/flow-control.js"></script>
+				<script src="js/form-validation.js"></script>
 				<!--Switching to skim reading ch.5-->
 				<h3 id="event-handling" class="blue-background">Click here to trigger event.</h3>
 				<script src="js/event-handling.js"></script>
 				<h3 id="button-pushed-div">No buttons have been pushed yet.</h3>
+				<div>Click to remove me.</div>
+				<script src="libs/jquery-3.2.1.js"></script>
+				<script src="js/j-query-example.js"></script>
+				<div id="map"></div>
+				<script src="js/google-map.js"></script>
 		</div>
+
+		<h2 id="accordion">Accordion</h2>
+		<ul class='accordion' id="accordion-list">
+			<li>
+				<button class="accordion-control">Paragraph 1</button>
+				<p class="accordion-panel">This is the first paragraph.</p>
+			</li>
+			<li>
+				<button class="accordion-control">Paragraph 2</button>
+				<p class="accordion-panel">This is the second paragraph.</p>
+			<li>
+				<button class="accordion-control">Paragraph 3</button>
+				<p class="accordion-panel">This is the third paragraph.</p>
+			</li>
+		</ul>
+		<script src="js/accordion-example.js"></script>
+
+		<h2 id="tablist">Tab List</h2>
+		<div class = tablist>
+			<ul>
+				<li class="tab active"><a href="#par1">Tab 1</a></li>
+				<li class="tab"><a href="#par2">Tab 2</a></li>
+				<li class="tab"><a href="#par3">Tab 3</a></li>
+			</ul>
+		</div>
+		<div class="tablist-panel active" id="par1"><p>This is the first paragraph.</p></div>
+		<div class="tablist-panel" id="par2"><p>This is the second paragraph.</p></div>
+		<div class="tablist-panel" id="par3"><p>This is the third paragraph.</p></div>
+		<script src="js/tablist-example.js"></script>
+
+		<div id = "share-options">
+			<P>This is a modal</P>
+			<P>This is a modal</P>
+			<P>This is a modal</P>
+		</div>
+		<script src = "js/modal-window.js"></script>
+		<script src = "js/modal-init.js"></script>
+
+		<h3 id="pv">Photo Viewer</h3>
+		<div id="photo-viewer"></div>
+		<div id="thumbnails">
+			<a href="images/image1.jpg" class="thumb active">
+				<img src="images/thumb1.jpg" alt="image1" />
+			</a>
+			<a href="images/image2.jpg" class="thumb">
+				<img src="images/thumb2.jpg" alt="image2" />
+			</a>
+			<a href="images/image3.jpg" class="thumb">
+				<img src="images/thumb3.jpg" alt="image3" />
+			</a>
+		</div>
+		<script src="js/photo-viewer.js"></script>
 		<footer>
 			<address>
 				<p>Author, 10 Fake street, Dublin</p>
