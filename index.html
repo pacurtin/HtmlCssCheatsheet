@@ -22,7 +22,8 @@
 				<a href="#javascripts">Javascripts</a>
 				<a href="#accordion">Accordion</a>
 				<a href="#tablist">Tab List</a>
-				<a href="#pv">Photo Viewer</a>>
+				<a href="#pv">Photo Viewer</a>
+				<a href="#fss">Filtering, Sorting, Searching</a>
 				<a class="coming-soon" href="#something">JustAnExample</a>
 			</nav>	
 			<div id = "mouse-coords">
@@ -33,7 +34,7 @@
 				</p>
 			</div>
 	</header>
-	<div class = "restOfScreen">
+	<input class = "restOfScreen">
 		<div class="floating-side-by-side-divs align-center">
 			<div class="introduction-div">
 				<h2 id="intro">Introduction</h2>
@@ -171,11 +172,16 @@
 							<input type="checkbox" name="checkbox" value="250cc" /> 250cc
 							<input type="checkbox" name="checkbox" value="500cc" /> 500cc
 						</label></div>
-						<div><label>Favorite Pet:</label>
-							<select id="petChoice">
+						<div>
+							<label for="petChoice">Favorite Pet:</label>
+							<select id="petChoice" name="petChoice">
+								<option value="Choose">Please choose an option</option>
 								<option value="Cat">Cat</option>
 								<option value="Dog">Dog</option>
-								<option value="Bird">Bird</option>
+							</select>
+							<label for="breedChoice">Favorite Breed:</label>
+							<select id="breedChoice">
+								<option>Please choose a pet first</option>
 							</select>
 						</div>
 						<div id="petChoiceWarning"></div>
@@ -192,10 +198,12 @@
 					<p>This is a button:</p>
 					<button>Hello</button>
 				</form>
-				<form action="http://example.php" method="GET">
+				<form action="http://example.php" id="searchForm" method="GET">
 					<p>Search:</p>
-					<input type="search" name="search" />
-					<input type="submit" value="Submit" />
+					<div id="searchFormContents">
+						<input type="search" name="search" />
+						<input type="submit" value="Submit" />
+					</div>
 				</form>
 			</div>
 
@@ -292,6 +300,74 @@
 			</a>
 		</div>
 		<script src="js/photo-viewer.js"></script>
+
+		<h3 id="fss">Filtering, Sorting, Searching</h3>
+		<h4>Original Array</h4>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Hourly Rate</th>
+				</tr>
+			</thead>
+			<tbody id="orig-array-tbody">
+				<tr>
+					<td>Didn't load</td>
+					<td>Didn't load</td>
+				</tr>
+			</tbody>
+		</table>
+		<h4>Filtered Array</h4>
+		<table>
+			<thead>
+			<tr>
+				<th>Name</th>
+				<th>Hourly Rate</th>
+			</tr>
+			</thead>
+			<tbody id="filtered-array-tbody">
+			<tr>
+				<td>Didn't load</td>
+				<td>Didn't load</td>
+			</tr>
+			</tbody>
+		</table>
+		<h4>Search by Name Table</h4>
+		<div id="search">
+			<input type="text" placeholder="filter by search" id="search-input" />
+		</div>
+		<table>
+			<thead>
+			<tr>
+				<th>Name</th>
+				<th>Hourly Rate</th>
+			</tr>
+			</thead>
+			<tbody id="search-tbody">
+			<tr>
+				<td>Didn't load</td>
+				<td>Didn't load</td>
+			</tr>
+			</tbody>
+		</table>
+
+		<h4>Sort by Name Table</h4>
+		<table>
+			<thead>
+			<tr>
+				<th>Name</th>
+				<th>Hourly Rate</th>
+			</tr>
+			</thead>
+			<tbody id="sorted-array-tbody">
+			<tr>
+				<td>Didn't load</td>
+				<td>Didn't load</td>
+			</tr>
+			</tbody>
+		</table>
+		<script src="js/filtering-sorting-searching.js"></script>
+
 		<footer>
 			<address>
 				<p>Author, 10 Fake street, Dublin</p>
